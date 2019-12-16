@@ -1,0 +1,9 @@
+@mixin cards {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+@mixin border {
+    border: 2px solid $main-color;
+}

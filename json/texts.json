@@ -1,0 +1,13 @@
+{
+    "txtArray" : [
+        "<!DOCTYPE html>",
+        "<html>",
+        "<head>",
+        "<title>Portfolio</title>",
+        "</head>",
+        "<body>",
+        "<nav>",
+        "</nav>",
+        "<div class='about-me'>"
+    ]
+}
