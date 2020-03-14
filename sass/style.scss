@@ -235,9 +235,9 @@ body {
         letter-spacing: 1.5px;
 
         a {
-          color: $main-color;
+          color: $nav-brand-color;
           text-decoration: none;
-          padding-bottom: 15px;
+          padding: 15px 0;
 
           @media screen and (max-width: 270px) {
             padding: 0;
