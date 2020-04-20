@@ -30,12 +30,7 @@
     />
 
     <!-- FONT AWESOME -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
+    <script src="https://kit.fontawesome.com/e63a1830d3.js"></script>
 
     <!-- MATERIAL ICONS -->
     <link
@@ -152,7 +147,11 @@
                       <span>&lt;img/&gt;</span>
                     </div>
                   </div>
-                  <img class="card-img-top" src="images/me.png" alt="" />
+                  <img
+                    class="card-img-top"
+                    src="images/me.png"
+                    alt="photo of me"
+                  />
                 </div>
               </div>
             </div>
@@ -161,18 +160,17 @@
                 <div class="card">
                   <div class="card-header">
                     <h1>
-                      <span>"hello world",</span> <br />
-                      welcome to my portfolio.
+                      welcome to my portfolio website
                     </h1>
                   </div>
                   <div class="card-body">
-                    I am Aleksandra Čulinović, Junior Front-End Developer. I am
-                    passionate about learning, programming and design,
-                    interested in Angular and Scrum. The whole process of
-                    thinking, creating, coding, resolving problems and making
-                    something from nothing is what makes me happy. Every day
-                    there is something new to learn and that is why I love
-                    coding so much.
+                    I am Aleksandra Čulinović, Junior Front-End Developer
+                    passionate about programming and design. I find joy in the
+                    whole process of thinking, creating, coding, resolving
+                    problems and making something from nothing. What I like the
+                    most is that with every new day there is something new to
+                    learn. For me, programming is more than just writing code -
+                    it's a journey that makes me happy.
                   </div>
                 </div>
               </div>
@@ -187,13 +185,83 @@
           <span>&lt;/div&gt;</span>
         </div>
 
+        <!-- LATEST COMMIT -->
+        <!-- DIV -->
+        <div class="code">
+          <span>&lt;div class="latestCommit"&gt;</span>
+        </div>
+        <div class="commit">
+          <div class="container">
+            <div
+              class="row d-flex flex-column justify-content-around align-items-center"
+            >
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h1>my latest git commit:</h1>
+                  </div>
+                  <div class="card-body gitCommit"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- /DIV -->
+        <div class="code">
+          <span>&lt;/div&gt;</span>
+        </div>
+
+        <!-- SKILLS -->
+        <!-- DIV -->
+        <div class="code">
+          <span>&lt;div class="skills"&gt;</span>
+        </div>
+        <div class="skills">
+          <div class="container">
+            <div
+              class="row d-flex flex-column justify-content-around align-items-center"
+            >
+              <div class="col-md-8">
+                <div class="card">
+                  <div class="card-header">
+                    <h1>technologies I am skilled at:</h1>
+                  </div>
+                  <div class="card-body">
+                    <img src="./images/html.png" alt="html icon" />
+                    <img src="./images/css.png" alt="css icon" />
+                    <img src="./images/bootstrap.png" alt="bootstrap icon" />
+                    <img src="./images/sass.png" alt="sass icon" />
+                    <img src="./images/js.png" alt="js icon" />
+                    <img src="./images/jquery.png" alt="jquery icon" />
+                    <img src="./images//angular.png" alt="angular icon" />
+                    <img src="./images/git.png" alt="git icon" />
+                    <img src="./images/photoshop.png" alt="photoshop icon" />
+                    <img src="./images/xd.png" alt="xd icon" />
+                    <br />
+                    <br />
+                    <div>
+                      <span>Currently learning:</span> <br />
+                      <img src="./images/vue.png" alt="vue icon" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /DIV -->
+        <div class="code">
+          <span>&lt;/div&gt;</span>
+        </div>
+
         <!-- DIV -->
         <div class="code" id="portfolio">
           <span>&lt;div class="portfolio"&gt;</span>
         </div>
 
         <!-- PORTFOLIO -->
-        <div class="portfolio" id="portfolio">
+        <div class="portfolio">
           <div class="container">
             <div
               class="row d-flex flex-column justify-content-around align-items-center"
@@ -202,10 +270,6 @@
                 <div class="card">
                   <div class="card-header">
                     <h1>my projects</h1>
-                  </div>
-                  <div class="card-body">
-                    Skills: HTML5, CSS3, Bootstrap, Sass, JavaScript, jQuery,
-                    Angular and Git. Also Adobe Photoshop and AdobeXD.
                   </div>
                 </div>
               </div>
@@ -376,7 +440,7 @@
         </div>
 
         <!-- CONTACT -->
-        <div class="contact" id="contact">
+        <div class="contact">
           <div class="container">
             <div class="row d-flex justify-content-center">
               <div class="col-md-8">
@@ -451,7 +515,7 @@
                       <a
                         href="https://www.facebook.com/culinovic.a"
                         target="_blank"
-                        ><i class="fab fa-facebook"></i
+                        ><i class="fab fa-facebook-square"></i
                       ></a>
                       <a
                         href="https://www.instagram.com/culinovic.a/"
@@ -487,8 +551,13 @@
             <div class="row d-flex justify-content-center">
               designed and developed with &nbsp;<i class="material-icons"
                 >favorite_border</i
-              >&nbsp; by me. All rights reserved.
+              >&nbsp; by me.
             </div>
+          </div>
+          <div class="icons d-flex justify-content-end">
+            <span
+              >Skills icons from <a href="https://icons8.com/">Icons8</a></span
+            >
           </div>
         </footer>
 

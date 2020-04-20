@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 html,
 body {
@@ -9,7 +9,7 @@ body {
   margin: 0;
   background-color: $background-color;
   color: $text-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -159,10 +159,6 @@ body {
           @include cards;
           font-family: $ff-raleway;
 
-          span {
-            font-family: $ff-code;
-          }
-
           @media screen and (max-width: 270px) {
             h1 {
               font-size: 25px;
@@ -172,6 +168,72 @@ body {
             }
           }
         }
+
+        .card-body {
+          color: $nav-link-color;
+        }
+      }
+    }
+  }
+
+  // LATEST COMMIT
+  .commit {
+    margin: 100px 0;
+
+    @media screen and (max-width: 555px) {
+      margin: 50px 0;
+    }
+
+    .card {
+      @include cards;
+      @include border;
+
+      .card-header {
+        font-family: $ff-raleway;
+        @include cards;
+      }
+
+      .card-body {
+        font-family: $ff-code;
+        color: #eb4559;
+      }
+
+      @media screen and (max-width: 270px) {
+        h1 {
+          font-size: 25px;
+        }
+        .card-body {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  // SKILLS
+  .skills {
+    margin: 100px 0;
+
+    @media screen and (max-width: 555px) {
+      margin: 50px 0;
+    }
+
+    .card {
+      @include cards;
+      @include border;
+
+      .card-header {
+        font-family: $ff-raleway;
+        @include cards;
+      }
+
+      @media screen and (max-width: 270px) {
+        h1 {
+          font-size: 25px;
+        }
+      }
+
+      .card-body {
+        color: $nav-link-color;
       }
     }
   }
@@ -200,6 +262,10 @@ body {
         .card-body {
           font-size: 15px;
         }
+      }
+
+      .card-body i {
+        font-size: 60px;
       }
     }
 
@@ -269,14 +335,14 @@ body {
           height: 2px;
           width: 500px;
           position: absolute;
-          content: '';
+          content: "";
           background-color: $main-color;
         }
         &:after {
           height: 2px;
           width: 400px;
           position: absolute;
-          content: '';
+          content: "";
           background-color: $main-color;
         }
         &:before {
@@ -427,6 +493,15 @@ body {
       font-size: 12px;
       vertical-align: middle;
       padding-top: 5px;
+    }
+
+    .icons {
+      font-size: 9px;
+      color: #424242;
+
+      a {
+        color: $nav-link-color;
+      }
     }
   }
 

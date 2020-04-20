@@ -6,7 +6,7 @@ body {
   margin: 0;
   background-color: #202020;
   color: #8d8d8d;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth; }
 
 .loader {
@@ -108,13 +108,56 @@ body {
         border: none;
         border-radius: 0;
         font-family: "Raleway", sans-serif; }
-        .content .about .me-text .card .card-header span {
-          font-family: "Nanum Gothic Coding", monospace; }
         @media screen and (max-width: 270px) {
           .content .about .me-text .card .card-header h1 {
             font-size: 25px; }
           .content .about .me-text .card .card-header .card-body {
             font-size: 15px; } }
+      .content .about .me-text .card .card-body {
+        color: #5b5471; }
+.content .commit {
+  margin: 100px 0; }
+  @media screen and (max-width: 555px) {
+    .content .commit {
+      margin: 50px 0; } }
+  .content .commit .card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border: 2px solid #0f4c81; }
+    .content .commit .card .card-header {
+      font-family: "Raleway", sans-serif;
+      background: transparent;
+      border: none;
+      border-radius: 0; }
+    .content .commit .card .card-body {
+      font-family: "Nanum Gothic Coding", monospace;
+      color: #eb4559; }
+    @media screen and (max-width: 270px) {
+      .content .commit .card h1 {
+        font-size: 25px; }
+      .content .commit .card .card-body {
+        font-size: 15px; } }
+.content .skills {
+  margin: 100px 0; }
+  @media screen and (max-width: 555px) {
+    .content .skills {
+      margin: 50px 0; } }
+  .content .skills .card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border: 2px solid #0f4c81; }
+    .content .skills .card .card-header {
+      font-family: "Raleway", sans-serif;
+      background: transparent;
+      border: none;
+      border-radius: 0; }
+    @media screen and (max-width: 270px) {
+      .content .skills .card h1 {
+        font-size: 25px; } }
+    .content .skills .card .card-body {
+      color: #5b5471; }
 .content .portfolio {
   margin: 100px 0; }
   @media screen and (max-width: 555px) {
@@ -135,6 +178,8 @@ body {
         font-size: 25px; }
       .content .portfolio .card .card-body {
         font-size: 15px; } }
+    .content .portfolio .card .card-body i {
+      font-size: 60px; }
   .content .portfolio .portf {
     position: relative;
     overflow: hidden;
@@ -184,13 +229,13 @@ body {
         height: 2px;
         width: 500px;
         position: absolute;
-        content: '';
+        content: "";
         background-color: #0f4c81; }
       .content .portfolio .portf .title:after {
         height: 2px;
         width: 400px;
         position: absolute;
-        content: '';
+        content: "";
         background-color: #0f4c81; }
       .content .portfolio .portf .title:before {
         top: 0;
@@ -298,6 +343,11 @@ body {
     font-size: 12px;
     vertical-align: middle;
     padding-top: 5px; }
+  .content footer .icons {
+    font-size: 9px;
+    color: #424242; }
+    .content footer .icons a {
+      color: #5b5471; }
 .content .button {
   font-size: 40px;
   position: fixed;
