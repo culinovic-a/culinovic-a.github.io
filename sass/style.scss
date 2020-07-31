@@ -1,536 +1,481 @@
 @import "variables";
 @import "mixins";
-
 html,
 body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: $background-color;
-  color: $text-color;
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+// SCROLLBAR
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
 }
 
 // LOADER
 .loader {
-  position: relative;
-  max-width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background-color: $background-color;
-
-  span {
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    font-size: 80px;
-    color: $nav-brand-color;
-    font-family: $ff-poiret;
-
-    @media screen and (max-width: 555px) {
-      left: 35%;
-      top: 25%;
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: $background-color;
+    span {
+        position: absolute;
+        left: 45%;
+        top: 45%;
+        font-size: 80px;
+        color: $nav-brand-color;
+        font-family: $ff-poiret;
+        @media screen and (max-width: 555px) {
+            left: 35%;
+            top: 25%;
+        }
+        @media screen and (max-width: 370px) {
+            left: 29%;
+            top: 25%;
+        }
+        @media screen and (max-width: 260px) {
+            left: 19%;
+            top: 25%;
+        }
     }
-
-    @media screen and (max-width: 370px) {
-      left: 29%;
-      top: 25%;
-    }
-
-    @media screen and (max-width: 260px) {
-      left: 19%;
-      top: 25%;
-    }
-  }
 }
 
 // CONTENT
 .content {
-  .code {
-    width: 100%;
-    line-height: 80%;
-    overflow: hidden;
-
-    span {
-      font-family: $ff-code;
-      color: $code-color;
-      font-size: 10px;
-      margin: 0;
-      padding: 0;
-    }
-
-    p {
-      display: inline-block;
-      margin: 0;
-      font-size: 10px;
-    }
-  }
-
-  // NAVBAR
-  .nav {
-    margin: 100px 0;
-
-    @media screen and (max-width: 555px) {
-      margin: 50px 0;
-    }
-
-    .navbar {
-      width: 90%;
-      border-bottom: 5px solid $main-color;
-
-      button {
-        border: none;
-
-        .toggler-icon {
-          color: $nav-link-hover;
-        }
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      .navbar-nav {
-        .nav-item {
-          .nav-link {
-            color: $nav-link-color;
-
-            &:hover {
-              color: $nav-link-hover;
-            }
-          }
-
-          .active {
-            color: $nav-link-hover;
-          }
-        }
-      }
-
-      .navbar-brand {
-        color: $nav-brand-color;
-        font-family: $ff-poiret;
-        font-size: 40px;
-        font-weight: 700;
-
-        .short {
-          display: none;
-        }
-
-        @media screen and (max-width: 550px) {
-          .short {
-            display: block;
-          }
-          .long {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-  // ABOUT ME
-  .about {
-    margin: 100px 0;
-
-    @media screen and (max-width: 555px) {
-      margin: 50px 0;
-    }
-
-    .photo {
-      margin-top: 5px;
-      .card {
-        @include cards;
-
-        .card-header {
-          @include cards;
-        }
-      }
-    }
-
-    .me-text {
-      margin-top: 5px;
-      .card {
-        @include cards;
-        @include border;
-
-        .card-header {
-          @include cards;
-          font-family: $ff-raleway;
-
-          @media screen and (max-width: 270px) {
-            h1 {
-              font-size: 25px;
-            }
-            .card-body {
-              font-size: 15px;
-            }
-          }
-        }
-
-        .card-body {
-          color: $nav-link-color;
-        }
-      }
-    }
-  }
-
-  // LATEST COMMIT
-  .commit {
-    margin: 100px 0;
-
-    @media screen and (max-width: 555px) {
-      margin: 50px 0;
-    }
-
-    .card {
-      @include cards;
-      @include border;
-
-      .card-header {
-        font-family: $ff-raleway;
-        @include cards;
-      }
-
-      .card-body {
-        font-family: $ff-code;
-        color: #eb4559;
-      }
-
-      @media screen and (max-width: 270px) {
-        h1 {
-          font-size: 25px;
-        }
-        .card-body {
-          font-size: 15px;
-        }
-      }
-    }
-  }
-
-  // SKILLS
-  .skills {
-    margin: 100px 0;
-
-    @media screen and (max-width: 555px) {
-      margin: 50px 0;
-    }
-
-    .card {
-      @include cards;
-      @include border;
-
-      .card-header {
-        font-family: $ff-raleway;
-        @include cards;
-      }
-
-      @media screen and (max-width: 270px) {
-        h1 {
-          font-size: 25px;
-        }
-      }
-
-      .card-body {
-        color: $nav-link-color;
-      }
-    }
-  }
-
-  // PORTFOLIO
-  .portfolio {
-    margin: 100px 0;
-
-    @media screen and (max-width: 555px) {
-      margin: 50px 0;
-    }
-
-    .card {
-      @include cards;
-      @include border;
-
-      .card-header {
-        font-family: $ff-raleway;
-        @include cards;
-      }
-
-      @media screen and (max-width: 270px) {
-        h1 {
-          font-size: 25px;
-        }
-        .card-body {
-          font-size: 15px;
-        }
-      }
-
-      .card-body i {
-        font-size: 60px;
-      }
-    }
-
-    .portf {
-      position: relative;
-      overflow: hidden;
-      margin: 0;
-      width: 100%;
-      color: $white;
-      text-align: center;
-      font-size: 16px;
-      margin: 20px 0;
-
-      &:hover img {
-        zoom: 1;
-        -webkit-filter: blur(7px);
-        filter: blur(7px);
-        opacity: 0.35;
-      }
-
-      img {
-        opacity: 0.5;
-      }
-
-      figcaption {
-        position: absolute;
-        bottom: 42%;
-        left: 25px;
-        text-align: left;
-        opacity: 0;
-        padding: 5px 60px 5px 10px;
-        font-size: 15px;
-        letter-spacing: 1.5px;
-
-        a {
-          color: $nav-brand-color;
-          text-decoration: none;
-          padding: 15px 0;
-
-          @media screen and (max-width: 270px) {
+    .code {
+        width: 100%;
+        line-height: 80%;
+        overflow: hidden;
+        span {
+            font-family: $ff-code;
+            color: $code-color;
+            font-size: 10px;
+            margin: 0;
             padding: 0;
-          }
-
-          &:hover {
-            color: $white;
-          }
-        }
-      }
-
-      .title {
-        position: absolute;
-        top: 58%;
-        left: 25px;
-        padding: 5px 10px 10px;
-        font-family: $ff-raleway;
-
-        @media screen and (max-width: 270px) {
-          h5 {
-            font-size: 18px;
-          }
-          p {
-            display: none;
-          }
-        }
-
-        &:before {
-          height: 2px;
-          width: 500px;
-          position: absolute;
-          content: "";
-          background-color: $main-color;
-        }
-        &:after {
-          height: 2px;
-          width: 400px;
-          position: absolute;
-          content: "";
-          background-color: $main-color;
-        }
-        &:before {
-          top: 0;
-          left: 10px;
-          -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-        }
-        &:after {
-          bottom: 0;
-          right: 10px;
-          -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-        }
-
-        div:before {
-          top: 10px;
-          right: 0;
-          -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-        }
-        div:after {
-          bottom: 10px;
-          left: 0;
-          -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-        }
-      }
-      @media screen and (max-width: 270px) {
-        h5 {
-          font-size: 18px;
         }
         p {
-          display: none;
+            display: inline-block;
+            margin: 0;
+            font-size: 10px;
         }
-      }
     }
-
-    .portf *,
-    .portf *:before,
-    .portf *:after {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -webkit-transition: all 0.55s ease;
-      transition: all 0.55s ease;
+    // NAVBAR
+    .nav {
+        margin: 100px 0;
+        @media screen and (max-width: 555px) {
+            margin: 50px 0;
+        }
+        .navbar {
+            width: 90%;
+            border-bottom: 5px solid $main-color;
+            button {
+                border: none;
+                .toggler-icon {
+                    color: $nav-link-hover;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $nav-link-color;
+                        &:hover {
+                            color: $nav-link-hover;
+                        }
+                    }
+                    .active {
+                        color: $nav-link-hover;
+                    }
+                }
+            }
+            .navbar-brand {
+                color: $nav-brand-color;
+                font-family: $ff-poiret;
+                font-size: 40px;
+                font-weight: 700;
+                .short {
+                    display: none;
+                }
+                @media screen and (max-width: 550px) {
+                    .short {
+                        display: block;
+                    }
+                    .long {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
-    .portf:hover .title:before,
-    .portf:hover .title:after,
-    .portf:hover .title div:before,
-    .portf:hover .title div:after {
-      -webkit-transform: translate(0, 0);
-      transform: translate(0, 0);
+    // ABOUT ME
+    .about {
+        margin: 100px 0;
+        @media screen and (max-width: 555px) {
+            margin: 50px 0;
+        }
+        .photo {
+            margin-top: 5px;
+            .card {
+                @include cards;
+                .card-header {
+                    @include cards;
+                }
+            }
+        }
+        .me-text {
+            margin-top: 5px;
+            .card {
+                @include cards;
+                @include border;
+                .card-header {
+                    @include cards;
+                    font-family: $ff-raleway;
+                    @media screen and (max-width: 270px) {
+                        h1 {
+                            font-size: 25px;
+                        }
+                        .card-body {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .card-body {
+                    color: $nav-link-color;
+                }
+            }
+        }
     }
-    .portf:hover figcaption {
-      opacity: 1;
-      -webkit-transition-delay: 0.2s;
-      transition-delay: 0.2s;
-    }
-  }
-
-  // CONTACT
-  .contact {
-    margin: 100px 0;
-
-    @media screen and (max-width: 555px) {
-      margin: 50px 0;
-    }
-
-    .card {
-      @include cards;
-      @include border;
-
-      .card-header {
-        @include cards;
-        font-family: $ff-raleway;
-      }
-
-      .card-body {
-        form {
-          color: $nav-link-color;
-
-          input,
-          textarea,
-          button {
+    // LATEST COMMIT
+    .commit {
+        margin: 100px 0;
+        @media screen and (max-width: 555px) {
+            margin: 50px 0;
+        }
+        .card {
             @include cards;
-            border-bottom: 1px solid $nav-link-color;
-            color: $nav-link-hover;
-
-            &:focus {
-              outline: none;
-              box-shadow: none;
-              border-bottom: 1px solid $main-color;
+            @include border;
+            .card-header {
+                font-family: $ff-raleway;
+                @include cards;
             }
-          }
-
-          button {
-            color: $text-color;
-            border-radius: 0;
-
-            &:hover {
-              border-bottom: 1px solid $main-color;
-              color: $white;
+            .card-body {
+                font-family: $ff-code;
+                color: #eb4559;
             }
-
-            &:focus {
-              outline: none;
-              box-shadow: none;
+            @media screen and (max-width: 270px) {
+                h1 {
+                    font-size: 25px;
+                }
+                .card-body {
+                    font-size: 15px;
+                }
             }
-          }
         }
-      }
-
-      @media screen and (max-width: 270px) {
-        h1 {
-          font-size: 25px;
+    }
+    // SKILLS
+    .skills {
+        margin: 100px 0;
+        @media screen and (max-width: 555px) {
+            margin: 50px 0;
         }
-        .card-body {
-          font-size: 15px;
+        .card {
+            @include cards;
+            @include border;
+            .card-header {
+                font-family: $ff-raleway;
+                @include cards;
+            }
+            @media screen and (max-width: 270px) {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+            .card-body {
+                color: $nav-link-color;
+                img {
+                    margin: 0 3px;
+                }
+                .skilled-icons {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                .learning {
+                    margin-top: 50px;
+                }
+            }
         }
-      }
-
-      .card-footer {
-        @include cards;
-
-        a {
-          color: $nav-link-hover;
-          padding: 0 7px;
-
-          &:hover {
+    }
+    // PORTFOLIO
+    .portfolio {
+        margin: 100px 0;
+        @media screen and (max-width: 555px) {
+            margin: 50px 0;
+        }
+        .card {
+            @include cards;
+            @include border;
+            .card-header {
+                font-family: $ff-raleway;
+                @include cards;
+            }
+            @media screen and (max-width: 270px) {
+                h1 {
+                    font-size: 25px;
+                }
+                .card-body {
+                    font-size: 15px;
+                }
+            }
+            .card-body i {
+                font-size: 60px;
+            }
+        }
+        .portf {
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            width: 100%;
+            color: $white;
+            text-align: center;
+            font-size: 16px;
+            margin: 20px 0;
+            &:hover img {
+                zoom: 1;
+                -webkit-filter: blur(7px);
+                filter: blur(7px);
+                opacity: 0.35;
+            }
+            img {
+                opacity: 0.5;
+            }
+            figcaption {
+                position: absolute;
+                bottom: 42%;
+                left: 25px;
+                text-align: left;
+                opacity: 0;
+                padding: 5px 60px 5px 10px;
+                font-size: 15px;
+                letter-spacing: 1.5px;
+                a {
+                    color: $nav-brand-color;
+                    text-decoration: none;
+                    padding: 15px 0;
+                    @media screen and (max-width: 270px) {
+                        padding: 0;
+                    }
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+            .title {
+                position: absolute;
+                top: 58%;
+                left: 25px;
+                padding: 5px 10px 10px;
+                font-family: $ff-raleway;
+                text-transform: uppercase;
+                @media screen and (max-width: 270px) {
+                    h5 {
+                        font-size: 18px;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+                &:before {
+                    height: 2px;
+                    width: 500px;
+                    position: absolute;
+                    content: "";
+                    background-color: $main-color;
+                }
+                &:after {
+                    height: 2px;
+                    width: 400px;
+                    position: absolute;
+                    content: "";
+                    background-color: $main-color;
+                }
+                &:before {
+                    top: 0;
+                    left: 10px;
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+                &:after {
+                    bottom: 0;
+                    right: 10px;
+                    -webkit-transform: translateX(-100%);
+                    transform: translateX(-100%);
+                }
+                div:before {
+                    top: 10px;
+                    right: 0;
+                    -webkit-transform: translateY(100%);
+                    transform: translateY(100%);
+                }
+                div:after {
+                    bottom: 10px;
+                    left: 0;
+                    -webkit-transform: translateY(-100%);
+                    transform: translateY(-100%);
+                }
+            }
+            @media screen and (max-width: 270px) {
+                h5 {
+                    font-size: 18px;
+                }
+                p {
+                    display: none;
+                }
+            }
+        }
+        .portf *,
+        .portf *:before,
+        .portf *:after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.55s ease;
+            transition: all 0.55s ease;
+        }
+        .portf:hover .title:before,
+        .portf:hover .title:after,
+        .portf:hover .title div:before,
+        .portf:hover .title div:after {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+        .portf:hover figcaption {
+            opacity: 1;
+            -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+        }
+    }
+    // CONTACT
+    .contact {
+        margin: 100px 0;
+        @media screen and (max-width: 555px) {
+            margin: 50px 0;
+        }
+        .card {
+            @include cards;
+            @include border;
+            .card-header {
+                @include cards;
+                font-family: $ff-raleway;
+            }
+            .card-body {
+                form {
+                    color: $nav-link-color;
+                    input,
+                    textarea,
+                    button {
+                        @include cards;
+                        border-bottom: 1px solid $nav-link-color;
+                        color: $nav-link-hover;
+                        &:focus {
+                            outline: none;
+                            box-shadow: none;
+                            border-bottom: 1px solid $main-color;
+                        }
+                    }
+                    button {
+                        color: $text-color;
+                        border-radius: 0;
+                        &:hover {
+                            border-bottom: 1px solid $main-color;
+                            color: $white;
+                        }
+                        &:focus {
+                            outline: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 270px) {
+                h1 {
+                    font-size: 25px;
+                }
+                .card-body {
+                    font-size: 15px;
+                }
+            }
+            .card-footer {
+                @include cards;
+                a {
+                    color: $nav-link-hover;
+                    padding: 0 7px;
+                    &:hover {
+                        color: $main-color;
+                    }
+                    i {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    // FOOTER
+    footer {
+        margin: 50px 0;
+        font-size: 15px;
+        i {
             color: $main-color;
-          }
-
-          i {
-            font-size: 30px;
-          }
+            font-size: 12px;
+            vertical-align: middle;
+            padding-top: 5px;
         }
-      }
+        .icons {
+            font-size: 9px;
+            color: #424242;
+            a {
+                color: $nav-link-color;
+            }
+        }
     }
-  }
-
-  // FOOTER
-  footer {
-    margin: 50px 0;
-    font-size: 15px;
-
-    i {
-      color: $main-color;
-      font-size: 12px;
-      vertical-align: middle;
-      padding-top: 5px;
+    // SCROLL TO TOP
+    .button {
+        font-size: 40px;
+        position: fixed;
+        right: 50px;
+        bottom: 1%;
+        i {
+            color: $code-color;
+            opacity: 0.5;
+            padding: 0 10px;
+            border: 1px solid $code-color;
+            &:hover {
+                color: $white;
+                border: 1px solid $white;
+            }
+        }
+        @media screen and (max-width: 350px) {
+            right: 15px;
+            font-size: 25px;
+            i {
+                padding: 0 4px;
+            }
+        }
     }
-
-    .icons {
-      font-size: 9px;
-      color: #424242;
-
-      a {
-        color: $nav-link-color;
-      }
-    }
-  }
-
-  // SCROLL TO TOP
-  .button {
-    font-size: 40px;
-    position: fixed;
-    right: 50px;
-    bottom: 1%;
-
-    i {
-      color: $code-color;
-      opacity: 0.5;
-      padding: 0 10px;
-      border: 1px solid $code-color;
-
-      &:hover {
-        color: $white;
-        border: 1px solid $white;
-      }
-    }
-
-    @media screen and (max-width: 350px) {
-      right: 15px;
-      font-size: 25px;
-
-      i {
-        padding: 0 4px;
-      }
-    }
-  }
 }

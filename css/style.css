@@ -9,6 +9,16 @@ body {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth; }
 
+body::-webkit-scrollbar {
+  width: 1em; }
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey; }
+
 .loader {
   position: relative;
   max-width: 100%;
@@ -41,7 +51,7 @@ body {
   overflow: hidden; }
   .content .code span {
     font-family: "Nanum Gothic Coding", monospace;
-    color: #696969;
+    color: #a7a0a0;
     font-size: 10px;
     margin: 0;
     padding: 0; }
@@ -60,15 +70,15 @@ body {
     .content .nav .navbar button {
       border: none; }
       .content .nav .navbar button .toggler-icon {
-        color: #958ea9; }
+        color: #c3bed1; }
       .content .nav .navbar button:focus {
         outline: none; }
     .content .nav .navbar .navbar-nav .nav-item .nav-link {
-      color: #5b5471; }
+      color: #6f6f81; }
       .content .nav .navbar .navbar-nav .nav-item .nav-link:hover {
-        color: #958ea9; }
+        color: #c3bed1; }
     .content .nav .navbar .navbar-nav .nav-item .active {
-      color: #958ea9; }
+      color: #c3bed1; }
     .content .nav .navbar .navbar-brand {
       color: #c9c4d9;
       font-family: "Poiret One", cursive;
@@ -114,7 +124,7 @@ body {
           .content .about .me-text .card .card-header .card-body {
             font-size: 15px; } }
       .content .about .me-text .card .card-body {
-        color: #5b5471; }
+        color: #6f6f81; }
 .content .commit {
   margin: 100px 0; }
   @media screen and (max-width: 555px) {
@@ -157,7 +167,15 @@ body {
       .content .skills .card h1 {
         font-size: 25px; } }
     .content .skills .card .card-body {
-      color: #5b5471; }
+      color: #6f6f81; }
+      .content .skills .card .card-body img {
+        margin: 0 3px; }
+      .content .skills .card .card-body .skilled-icons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; }
+      .content .skills .card .card-body .learning {
+        margin-top: 50px; }
 .content .portfolio {
   margin: 100px 0; }
   @media screen and (max-width: 555px) {
@@ -219,7 +237,8 @@ body {
       top: 58%;
       left: 25px;
       padding: 5px 10px 10px;
-      font-family: "Raleway", sans-serif; }
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase; }
       @media screen and (max-width: 270px) {
         .content .portfolio .portf .title h5 {
           font-size: 18px; }
@@ -295,15 +314,15 @@ body {
       border-radius: 0;
       font-family: "Raleway", sans-serif; }
     .content .contact .card .card-body form {
-      color: #5b5471; }
+      color: #6f6f81; }
       .content .contact .card .card-body form input,
       .content .contact .card .card-body form textarea,
       .content .contact .card .card-body form button {
         background: transparent;
         border: none;
         border-radius: 0;
-        border-bottom: 1px solid #5b5471;
-        color: #958ea9; }
+        border-bottom: 1px solid #6f6f81;
+        color: #c3bed1; }
         .content .contact .card .card-body form input:focus,
         .content .contact .card .card-body form textarea:focus,
         .content .contact .card .card-body form button:focus {
@@ -329,7 +348,7 @@ body {
       border: none;
       border-radius: 0; }
       .content .contact .card .card-footer a {
-        color: #958ea9;
+        color: #c3bed1;
         padding: 0 7px; }
         .content .contact .card .card-footer a:hover {
           color: #0f4c81; }
@@ -347,17 +366,17 @@ body {
     font-size: 9px;
     color: #424242; }
     .content footer .icons a {
-      color: #5b5471; }
+      color: #6f6f81; }
 .content .button {
   font-size: 40px;
   position: fixed;
   right: 50px;
   bottom: 1%; }
   .content .button i {
-    color: #696969;
+    color: #a7a0a0;
     opacity: 0.5;
     padding: 0 10px;
-    border: 1px solid #696969; }
+    border: 1px solid #a7a0a0; }
     .content .button i:hover {
       color: #ffffff;
       border: 1px solid #ffffff; }
