@@ -7,7 +7,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: $background-color;
-    color: $text-color;
+    color: $pantone-color-1;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
 }
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
         left: 45%;
         top: 45%;
         font-size: 80px;
-        color: $nav-brand-color;
+        color: $pantone-color-1;
         font-family: $ff-poiret;
         @media screen and (max-width: 555px) {
             left: 35%;
@@ -82,11 +82,14 @@ body::-webkit-scrollbar-thumb {
         }
         .navbar {
             width: 90%;
-            border-bottom: 5px solid $main-color;
+            border-bottom: 5px solid $pantone-color-1;
             button {
                 border: none;
                 .toggler-icon {
-                    color: $nav-link-hover;
+                    color: $pantone-color-1;
+                    &:hover {
+                     color:  #f5df4d;
+                    }
                 }
                 &:focus {
                     outline: none;
@@ -95,18 +98,18 @@ body::-webkit-scrollbar-thumb {
             .navbar-nav {
                 .nav-item {
                     .nav-link {
-                        color: $nav-link-color;
+                        color: $pantone-color-1;
                         &:hover {
-                            color: $nav-link-hover;
+                            color: $pantone-color-2;
                         }
                     }
                     .active {
-                        color: $nav-link-hover;
+                        color: $pantone-color-2;
                     }
                 }
             }
             .navbar-brand {
-                color: $nav-brand-color;
+                color: $pantone-color-1;
                 font-family: $ff-poiret;
                 font-size: 40px;
                 font-weight: 700;
@@ -147,6 +150,7 @@ body::-webkit-scrollbar-thumb {
                 .card-header {
                     @include cards;
                     font-family: $ff-raleway;
+                    @include title;
                     @media screen and (max-width: 270px) {
                         h1 {
                             font-size: 25px;
@@ -155,9 +159,6 @@ body::-webkit-scrollbar-thumb {
                             font-size: 15px;
                         }
                     }
-                }
-                .card-body {
-                    color: $nav-link-color;
                 }
             }
         }
@@ -174,6 +175,7 @@ body::-webkit-scrollbar-thumb {
             .card-header {
                 font-family: $ff-raleway;
                 @include cards;
+                @include title;
             }
             .card-body {
                 font-family: $ff-code;
@@ -195,12 +197,14 @@ body::-webkit-scrollbar-thumb {
         @media screen and (max-width: 555px) {
             margin: 50px 0;
         }
+
         .card {
             @include cards;
             @include border;
             .card-header {
                 font-family: $ff-raleway;
                 @include cards;
+                @include title;
             }
             @media screen and (max-width: 270px) {
                 h1 {
@@ -208,7 +212,7 @@ body::-webkit-scrollbar-thumb {
                 }
             }
             .card-body {
-                color: $nav-link-color;
+                color: $pantone-color-1;
                 img {
                     margin: 0 3px;
                 }
@@ -216,9 +220,17 @@ body::-webkit-scrollbar-thumb {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
+
+                    i {
+                      @include icon;
+                    }
                 }
                 .learning {
                     margin-top: 50px;
+
+                    i {
+                      @include icon;
+                    }
                 }
             }
         }
@@ -235,6 +247,7 @@ body::-webkit-scrollbar-thumb {
             .card-header {
                 font-family: $ff-raleway;
                 @include cards;
+                @include title;
             }
             @media screen and (max-width: 270px) {
                 h1 {
@@ -276,7 +289,7 @@ body::-webkit-scrollbar-thumb {
                 font-size: 15px;
                 letter-spacing: 1.5px;
                 a {
-                    color: $nav-brand-color;
+                    color:  $pantone-color-2;
                     text-decoration: none;
                     padding: 15px 0;
                     @media screen and (max-width: 270px) {
@@ -307,14 +320,14 @@ body::-webkit-scrollbar-thumb {
                     width: 500px;
                     position: absolute;
                     content: "";
-                    background-color: $main-color;
+                    background-color: $pantone-color-1;
                 }
                 &:after {
                     height: 2px;
                     width: 400px;
                     position: absolute;
                     content: "";
-                    background-color: $main-color;
+                    background-color: $pantone-color-1;
                 }
                 &:before {
                     top: 0;
@@ -383,27 +396,28 @@ body::-webkit-scrollbar-thumb {
             .card-header {
                 @include cards;
                 font-family: $ff-raleway;
+                @include title;
             }
             .card-body {
                 form {
-                    color: $nav-link-color;
+                    color: $pantone-color-1;
                     input,
                     textarea,
                     button {
                         @include cards;
-                        border-bottom: 1px solid $nav-link-color;
-                        color: $nav-link-hover;
+                        border-bottom: 1px solid $pantone-color-1;
+                        color: $pantone-color-2;
                         &:focus {
                             outline: none;
                             box-shadow: none;
-                            border-bottom: 1px solid $main-color;
+                            border-bottom: 1px solid $pantone-color-2;
                         }
                     }
                     button {
-                        color: $text-color;
+                        color: $pantone-color-1;
                         border-radius: 0;
                         &:hover {
-                            border-bottom: 1px solid $main-color;
+                            border-bottom: 1px solid $pantone-color-2;
                             color: $white;
                         }
                         &:focus {
@@ -424,10 +438,10 @@ body::-webkit-scrollbar-thumb {
             .card-footer {
                 @include cards;
                 a {
-                    color: $nav-link-hover;
+                    color: $pantone-color-1;
                     padding: 0 7px;
                     &:hover {
-                        color: $main-color;
+                        color:$pantone-color-2;
                     }
                     i {
                         font-size: 30px;
@@ -441,7 +455,7 @@ body::-webkit-scrollbar-thumb {
         margin: 50px 0;
         font-size: 15px;
         i {
-            color: $main-color;
+            color:$pantone-color-2;
             font-size: 12px;
             vertical-align: middle;
             padding-top: 5px;
@@ -450,7 +464,7 @@ body::-webkit-scrollbar-thumb {
             font-size: 9px;
             color: #424242;
             a {
-                color: $nav-link-color;
+                color: $pantone-color-1;
             }
         }
     }
@@ -466,7 +480,8 @@ body::-webkit-scrollbar-thumb {
             padding: 0 10px;
             border: 1px solid $code-color;
             &:hover {
-                color: $white;
+                color: $pantone-color-2;
+                opacity: 1;
                 border: 1px solid $white;
             }
         }

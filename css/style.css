@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #202020;
-  color: #8d8d8d;
+  color: #939597;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth; }
 
@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
     left: 45%;
     top: 45%;
     font-size: 80px;
-    color: #c9c4d9;
+    color: #939597;
     font-family: "Poiret One", cursive; }
     @media screen and (max-width: 555px) {
       .loader span {
@@ -66,21 +66,23 @@ body::-webkit-scrollbar-thumb {
       margin: 50px 0; } }
   .content .nav .navbar {
     width: 90%;
-    border-bottom: 5px solid #0f4c81; }
+    border-bottom: 5px solid #939597; }
     .content .nav .navbar button {
       border: none; }
       .content .nav .navbar button .toggler-icon {
-        color: #c3bed1; }
+        color: #939597; }
+        .content .nav .navbar button .toggler-icon:hover {
+          color: #f5df4d; }
       .content .nav .navbar button:focus {
         outline: none; }
     .content .nav .navbar .navbar-nav .nav-item .nav-link {
-      color: #6f6f81; }
+      color: #939597; }
       .content .nav .navbar .navbar-nav .nav-item .nav-link:hover {
-        color: #c3bed1; }
+        color: #f5df4d; }
     .content .nav .navbar .navbar-nav .nav-item .active {
-      color: #c3bed1; }
+      color: #f5df4d; }
     .content .nav .navbar .navbar-brand {
-      color: #c9c4d9;
+      color: #939597;
       font-family: "Poiret One", cursive;
       font-size: 40px;
       font-weight: 700; }
@@ -112,19 +114,19 @@ body::-webkit-scrollbar-thumb {
       background: transparent;
       border: none;
       border-radius: 0;
-      border: 2px solid #0f4c81; }
+      border: 4px solid #939597; }
       .content .about .me-text .card .card-header {
         background: transparent;
         border: none;
         border-radius: 0;
-        font-family: "Raleway", sans-serif; }
+        font-family: "Raleway", sans-serif;
+        font-size: 25px;
+        color: #f5df4d; }
         @media screen and (max-width: 270px) {
           .content .about .me-text .card .card-header h1 {
             font-size: 25px; }
           .content .about .me-text .card .card-header .card-body {
             font-size: 15px; } }
-      .content .about .me-text .card .card-body {
-        color: #6f6f81; }
 .content .commit {
   margin: 100px 0; }
   @media screen and (max-width: 555px) {
@@ -134,12 +136,14 @@ body::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
     border-radius: 0;
-    border: 2px solid #0f4c81; }
+    border: 4px solid #939597; }
     .content .commit .card .card-header {
       font-family: "Raleway", sans-serif;
       background: transparent;
       border: none;
-      border-radius: 0; }
+      border-radius: 0;
+      font-size: 25px;
+      color: #f5df4d; }
     .content .commit .card .card-body {
       font-family: "Nanum Gothic Coding", monospace;
       color: #eb4559; }
@@ -157,25 +161,33 @@ body::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
     border-radius: 0;
-    border: 2px solid #0f4c81; }
+    border: 4px solid #939597; }
     .content .skills .card .card-header {
       font-family: "Raleway", sans-serif;
       background: transparent;
       border: none;
-      border-radius: 0; }
+      border-radius: 0;
+      font-size: 25px;
+      color: #f5df4d; }
     @media screen and (max-width: 270px) {
       .content .skills .card h1 {
         font-size: 25px; } }
     .content .skills .card .card-body {
-      color: #6f6f81; }
+      color: #939597; }
       .content .skills .card .card-body img {
         margin: 0 3px; }
       .content .skills .card .card-body .skilled-icons {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap; }
+        .content .skills .card .card-body .skilled-icons i {
+          font-size: 96px;
+          margin: 10px 5px; }
       .content .skills .card .card-body .learning {
         margin-top: 50px; }
+        .content .skills .card .card-body .learning i {
+          font-size: 96px;
+          margin: 10px 5px; }
 .content .portfolio {
   margin: 100px 0; }
   @media screen and (max-width: 555px) {
@@ -185,12 +197,14 @@ body::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
     border-radius: 0;
-    border: 2px solid #0f4c81; }
+    border: 4px solid #939597; }
     .content .portfolio .card .card-header {
       font-family: "Raleway", sans-serif;
       background: transparent;
       border: none;
-      border-radius: 0; }
+      border-radius: 0;
+      font-size: 25px;
+      color: #f5df4d; }
     @media screen and (max-width: 270px) {
       .content .portfolio .card h1 {
         font-size: 25px; }
@@ -224,7 +238,7 @@ body::-webkit-scrollbar-thumb {
       font-size: 15px;
       letter-spacing: 1.5px; }
       .content .portfolio .portf figcaption a {
-        color: #c9c4d9;
+        color: #f5df4d;
         text-decoration: none;
         padding: 15px 0; }
         @media screen and (max-width: 270px) {
@@ -249,13 +263,13 @@ body::-webkit-scrollbar-thumb {
         width: 500px;
         position: absolute;
         content: "";
-        background-color: #0f4c81; }
+        background-color: #939597; }
       .content .portfolio .portf .title:after {
         height: 2px;
         width: 400px;
         position: absolute;
         content: "";
-        background-color: #0f4c81; }
+        background-color: #939597; }
       .content .portfolio .portf .title:before {
         top: 0;
         left: 10px;
@@ -307,33 +321,35 @@ body::-webkit-scrollbar-thumb {
     background: transparent;
     border: none;
     border-radius: 0;
-    border: 2px solid #0f4c81; }
+    border: 4px solid #939597; }
     .content .contact .card .card-header {
       background: transparent;
       border: none;
       border-radius: 0;
-      font-family: "Raleway", sans-serif; }
+      font-family: "Raleway", sans-serif;
+      font-size: 25px;
+      color: #f5df4d; }
     .content .contact .card .card-body form {
-      color: #6f6f81; }
+      color: #939597; }
       .content .contact .card .card-body form input,
       .content .contact .card .card-body form textarea,
       .content .contact .card .card-body form button {
         background: transparent;
         border: none;
         border-radius: 0;
-        border-bottom: 1px solid #6f6f81;
-        color: #c3bed1; }
+        border-bottom: 1px solid #939597;
+        color: #f5df4d; }
         .content .contact .card .card-body form input:focus,
         .content .contact .card .card-body form textarea:focus,
         .content .contact .card .card-body form button:focus {
           outline: none;
           box-shadow: none;
-          border-bottom: 1px solid #0f4c81; }
+          border-bottom: 1px solid #f5df4d; }
       .content .contact .card .card-body form button {
-        color: #8d8d8d;
+        color: #939597;
         border-radius: 0; }
         .content .contact .card .card-body form button:hover {
-          border-bottom: 1px solid #0f4c81;
+          border-bottom: 1px solid #f5df4d;
           color: #ffffff; }
         .content .contact .card .card-body form button:focus {
           outline: none;
@@ -348,17 +364,17 @@ body::-webkit-scrollbar-thumb {
       border: none;
       border-radius: 0; }
       .content .contact .card .card-footer a {
-        color: #c3bed1;
+        color: #939597;
         padding: 0 7px; }
         .content .contact .card .card-footer a:hover {
-          color: #0f4c81; }
+          color: #f5df4d; }
         .content .contact .card .card-footer a i {
           font-size: 30px; }
 .content footer {
   margin: 50px 0;
   font-size: 15px; }
   .content footer i {
-    color: #0f4c81;
+    color: #f5df4d;
     font-size: 12px;
     vertical-align: middle;
     padding-top: 5px; }
@@ -366,7 +382,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 9px;
     color: #424242; }
     .content footer .icons a {
-      color: #6f6f81; }
+      color: #939597; }
 .content .button {
   font-size: 40px;
   position: fixed;
@@ -378,7 +394,8 @@ body::-webkit-scrollbar-thumb {
     padding: 0 10px;
     border: 1px solid #a7a0a0; }
     .content .button i:hover {
-      color: #ffffff;
+      color: #f5df4d;
+      opacity: 1;
       border: 1px solid #ffffff; }
   @media screen and (max-width: 350px) {
     .content .button {
